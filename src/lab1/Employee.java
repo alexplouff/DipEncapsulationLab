@@ -10,7 +10,7 @@ import java.util.Date;
  * @author      Jim Lombardo, WCTC Instructor
  * @version     1.01
  */
-public class Employee {
+public class Employee implements EmployeeStrategy {
     private String firstName;
     private String lastName;
     private String ssn;
@@ -27,42 +27,52 @@ public class Employee {
         this.cubeId = cubeId;
     }
 
+    @Override
     public String getFirstName() {
         return firstName;
     }
 
+    @Override
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    @Override
     public String getLastName() {
         return lastName;
     }
 
+    @Override
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    @Override
     public String getSsn() {
         return ssn;
     }
 
+    @Override
     public void setSsn(String ssn) {
         this.ssn = ssn;
     }
 
+    @Override
     public Date getBirthDate() {
         return birthDate;
     }
 
+    @Override
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
+    @Override
     public String getCubeId() {
         return cubeId;
     }
 
+    @Override
     public void setCubeId(String cubeId) {
         this.cubeId = cubeId;
     }
@@ -125,7 +135,7 @@ public class Employee {
         moveIntoCubicle( this.cubeId );
         getStatus();
                 System.out.println("CubeId: " + this.cubeId);
-                System.out.println("\nHired!");
+                System.out.println("Hired!");
     }
     
 }
