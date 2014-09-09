@@ -17,12 +17,14 @@ public class Startup {
         
         HumanResourcesStrategy hr = new HumanResources();
         
-        EmployeeStrategy employee = new Employee( "Alex" , "Plouff" , "B101"  );
-        EmployeeStrategy employee2 = new Employee( "Dan" , "Rogers" , "C201" ) ;
+        EmployeeStrategy alex = new Employee( "Alex" , "Plouff" , "B101"  );
+        EmployeeStrategy dan = new Employee( "Dan" , "Rogers" , "C201" ) ;
         
+        hr.hireEmployee(alex, "B101");
+        System.out.println(alex.getCubeId());
         
-        hr.hireEmployee(employee);
-        hr.hireEmployee(employee2);
+        hr.hireEmployee(dan, "B201");
+        System.out.println(dan.getCubeId());
     }
     
     

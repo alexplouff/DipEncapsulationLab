@@ -12,6 +12,6 @@ package lab1;
  */
 public interface HumanResourcesStrategy {
 
-    void hireEmployee( EmployeeStrategy e );
+    public abstract void hireEmployee( EmployeeStrategy e , String cubeId );
     
 }

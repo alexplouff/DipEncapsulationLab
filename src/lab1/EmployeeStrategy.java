@@ -16,8 +16,6 @@ public interface EmployeeStrategy {
 
     public abstract Date getBirthDate();
 
-    public abstract String getCubeId();
-
     public abstract String getFirstName();
 
     public abstract String getLastName();
@@ -26,14 +24,15 @@ public interface EmployeeStrategy {
 
     public abstract void setBirthDate(Date birthDate);
 
-    public abstract void setCubeId(String cubeId);
-
     public abstract void setFirstName(String firstName);
 
     public abstract void setLastName(String lastName);
 
     public abstract void setSsn(String ssn);
     
-    public abstract void hireEmployee( );
+    //ask about this
+    public abstract void setCubeId( String cubeId );
+    
+    public abstract String getCubeId();
     
 }
