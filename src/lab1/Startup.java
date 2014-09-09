@@ -19,16 +19,12 @@ public class Startup {
             may need to create a new class that talks to Employee. This does
             not have to be a GUI class.
         */
-        Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
+        Employee employee = new Employee( "Alex" , "Plouff" , "B101"  );
+        Employee employee2 = new Employee( "Dan" , "Rogers" , "C201" ) ;
         
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
-
-        System.out.println("The employee's status is: " + employee.getStatus());
+        
+        employee.hireEmployee();
+        employee2.hireEmployee();
     }
     
     
