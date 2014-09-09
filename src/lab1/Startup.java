@@ -1,5 +1,8 @@
 package lab1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * In this lab your challenge is to fix the code in both classes to use
  * proper encapsulation and the other best practices as explained by 
@@ -11,9 +14,7 @@ package lab1;
 public class Startup {
     public static void main(String[] args) {
         
-        
-//        employee.hireEmployee();
-//        employee2.hireEmployee();
+
         
         HumanResourcesStrategy hr = new HumanResources();
         
@@ -25,6 +26,13 @@ public class Startup {
         
         hr.hireEmployee(dan, "B201");
         System.out.println(dan.getCubeId());
+        
+        List myEmployeeList = new ArrayList();
+        
+        myEmployeeList.add(alex);
+        myEmployeeList.add(dan);
+        
+        System.out.println(myEmployeeList);
     }
     
     
