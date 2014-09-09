@@ -21,18 +21,16 @@ public class Startup {
         EmployeeStrategy alex = new Employee( "Alex" , "Plouff" , "B101"  );
         EmployeeStrategy dan = new Employee( "Dan" , "Rogers" , "C201" ) ;
         
-        hr.hireEmployee(alex, "B101");
-        System.out.println(alex.getCubeId());
+        hr.hireEmployee( alex, "B101" );
         
-        hr.hireEmployee(dan, "B201");
-        System.out.println(dan.getCubeId());
+        hr.hireEmployee( dan, "C202" );
         
         List myEmployeeList = new ArrayList();
         
-        myEmployeeList.add(alex);
-        myEmployeeList.add(dan);
+        myEmployeeList.add( alex );
+        myEmployeeList.add( dan );
         
-        System.out.println(myEmployeeList);
+        System.out.println( myEmployeeList +"\n");
     }
     
     
