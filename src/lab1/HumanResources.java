@@ -17,14 +17,6 @@ public class HumanResources implements HumanResourcesStrategy {
     private boolean reviewedDeptPolicies;
     private boolean movedIn;  
     private String cubeId;
-
-    private String getCubeId() {
-        return cubeId;
-    }
-
-    private void setCubeId(String cubeId) {
-        this.cubeId = cubeId;
-    }
     
     // Assume this must be performed first
     private void meetWithHrForBenefitAndSalryInfo() {
@@ -75,9 +67,27 @@ public class HumanResources implements HumanResourcesStrategy {
             return "Orientation in progress...";
         }
     }  
-    public void hireEmployee( EmployeeStrategy e , String cubeId ){
+    
+    
+    
+    
+    EmployeeStrategy e = new Employee();
+    
+    @Override
+    public void createNewEmployee( String firstName , String lastName , 
+                                        String cubeId ){
+        this.e = new Employee( firstName , lastName , cubeId );
         
-        e.setCubeId(cubeId);
+    }
+    
+    @Override
+    public EmployeeStrategy getEmployee(){
+        return e;
+    }
+    
+    @Override
+    public void hireEmployee( EmployeeStrategy e ){
+    
         
         meetWithHrForBenefitAndSalryInfo();
         meetDepartmentStaff();
@@ -85,8 +95,12 @@ public class HumanResources implements HumanResourcesStrategy {
         moveIntoCubicle( cubeId );
         getStatus();
         
-        System.out.println(e + " has been hired"
-                + "\nTheir cubeId is: " + cubeId);
     }
    
+    @Override
+    public String verifyNewHire(){
+        return e.getFirstName() + " " + e.getLastName() + 
+                " was successfully hired!" + 
+                "\n CubeId: " + e.getCubeId();
+    }
 }

@@ -1,7 +1,7 @@
 package lab1;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 /**
  * In this lab your challenge is to fix the code in both classes to use
@@ -17,20 +17,33 @@ public class Startup {
 
         
         HumanResourcesStrategy hr = new HumanResources();
+
         
-        EmployeeStrategy alex = new Employee( "Alex" , "Plouff" , "B101"  );
-        EmployeeStrategy dan = new Employee( "Dan" , "Rogers" , "C201" ) ;
+        hr.createNewEmployee("Alex", "Plouff", "B101");
+        hr.hireEmployee( hr.getEmployee() );
+        System.out.println( hr.verifyNewHire() );
         
-        hr.hireEmployee( alex, "B101" );
+        hr.createNewEmployee("Dan", "Rogers", "C306");
+        hr.hireEmployee( hr.getEmployee() );
+        System.out.println( hr.verifyNewHire() );
         
-        hr.hireEmployee( dan, "C202" );
         
-        List myEmployeeList = new ArrayList();
-        
-        myEmployeeList.add( alex );
-        myEmployeeList.add( dan );
-        
-        System.out.println( myEmployeeList +"\n");
+    //        
+//        EmployeeStrategy alex = new Employee( "Alex" , "Plouff" , "B101"  );
+//        EmployeeStrategy dan = new Employee( "Dan" , "Rogers" , "C201" ) ;
+//        
+//        hr.hireEmployee( alex, "B101" );
+//        
+//        hr.hireEmployee( dan, "C202" );
+//        
+//        List myEmployeeList = new ArrayList();
+//        
+//        myEmployeeList.add( alex );
+//        myEmployeeList.add( dan );
+//        
+//        System.out.println( myEmployeeList );
+    
+    
     }
     
     

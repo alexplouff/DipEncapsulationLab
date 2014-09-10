@@ -12,6 +12,12 @@ package lab1;
  */
 public interface HumanResourcesStrategy {
 
-    public abstract void hireEmployee( EmployeeStrategy e , String cubeId );
+    void createNewEmployee(String firstName, String lastName, String cubeId);
+
+    EmployeeStrategy getEmployee();
+
+    void hireEmployee(EmployeeStrategy e);
+
+    String verifyNewHire();
     
 }
