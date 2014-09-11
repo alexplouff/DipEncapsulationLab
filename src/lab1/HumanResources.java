@@ -76,7 +76,7 @@ public class HumanResources {
     
     public void createNewEmployee( String firstName , String lastName , 
                                         String cubeId ){
-        employee = new Employee( firstName , lastName , cubeId );
+        this.employee = new Employee( firstName , lastName , cubeId );
 
         db.addEmployeeToList(employee);
         
@@ -91,8 +91,7 @@ public class HumanResources {
     }      
     
    // @Override
-    public void hireEmployee( EmployeeStrategy e ){
-    
+    public void hireEmployee( Employee e ){    
         
         meetWithHrForBenefitAndSalryInfo();
         meetDepartmentStaff();
@@ -104,9 +103,11 @@ public class HumanResources {
    
    // @Override
     public String verifyNewHire(){
+        
         return employee.getFirstName() + " " + employee.getLastName() + 
                 " was successfully hired!" + 
                 "\n CubeId: " + employee.getCubeId();
+        
     }
     
     

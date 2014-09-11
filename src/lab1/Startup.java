@@ -23,28 +23,22 @@ public class Startup {
         HumanResources hr = new HumanResources();
         
         hr.createNewEmployee( "Dan"  , "Rogers" , "C306" );
+        
+       // System.out.println( hr.verifyNewHire() );
+        
         hr.createNewEmployee( "Alex" , "Plouff" , "B101" );
+        
+       // System.out.println( hr.verifyNewHire() );
+        
         hr.createNewEmployee( "Josh" , "Conley" , "B102" );
         
-        System.out.println( hr.getEmployeeList() );
+       // System.out.println( hr.verifyNewHire() );
         
+        System.out.println(hr.getEmployeeList());
         
+      //  System.out.println( hr.getEmployeeList() );
+
         
-//        employeeList.add( hr.getEmployee() );
-    //        
-//        EmployeeStrategy alex = new Employee( "Alex" , "Plouff" , "B101"  );
-//        EmployeeStrategy dan = new Employee( "Dan" , "Rogers" , "C201" ) ;
-//        
-//        hr.hireEmployee( alex, "B101" );
-//        
-//        hr.hireEmployee( dan, "C202" );
-//        
-//        List myEmployeeList = new ArrayList();
-//        
-//        myEmployeeList.add( alex );
-//        myEmployeeList.add( dan );
-//        
-//        System.out.println( myEmployeeList );
     
     
     }
