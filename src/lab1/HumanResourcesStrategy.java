@@ -6,18 +6,21 @@
 
 package lab1;
 
+import java.util.List;
+
 /**
  *
  * @author Alex
  */
 public interface HumanResourcesStrategy {
 
-    void createNewEmployee(String firstName, String lastName, String cubeId);
+    public abstract void createNewEmployee(String firstName, String lastName, String cubeId);
 
-    EmployeeStrategy getEmployee();
+    public abstract Employee getEmployee();
 
-    void hireEmployee(EmployeeStrategy e);
+    public abstract void hireEmployee(EmployeeStrategy e);
 
-    String verifyNewHire();
+    public abstract String verifyNewHire();
+    
     
 }

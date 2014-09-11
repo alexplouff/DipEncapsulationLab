@@ -6,11 +6,13 @@
 
 package lab1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Alex
  */
-public class HumanResources implements HumanResourcesStrategy {
+public class HumanResources {
     
     private boolean metWithHr;
     private boolean metDeptStaff;
@@ -68,24 +70,27 @@ public class HumanResources implements HumanResourcesStrategy {
         }
     }  
     
+    Employee employee = null;
+    MockEmployeeDatabase db = new MockEmployeeDatabase ();
     
     
-    
-    EmployeeStrategy e = new Employee();
-    
-    @Override
     public void createNewEmployee( String firstName , String lastName , 
                                         String cubeId ){
-        this.e = new Employee( firstName , lastName , cubeId );
+        employee = new Employee( firstName , lastName , cubeId );
+
+        db.addEmployeeToList(employee);
         
+    }    
+    
+    public ArrayList<Employee> getEmployeeList(){
+        return db.getList();
     }
     
-    @Override
-    public EmployeeStrategy getEmployee(){
-        return e;
-    }
+    public Employee getEmployee(){
+        return employee;
+    }      
     
-    @Override
+   // @Override
     public void hireEmployee( EmployeeStrategy e ){
     
         
@@ -97,10 +102,14 @@ public class HumanResources implements HumanResourcesStrategy {
         
     }
    
-    @Override
+   // @Override
     public String verifyNewHire(){
-        return e.getFirstName() + " " + e.getLastName() + 
+        return employee.getFirstName() + " " + employee.getLastName() + 
                 " was successfully hired!" + 
-                "\n CubeId: " + e.getCubeId();
+                "\n CubeId: " + employee.getCubeId();
     }
+    
+    
+    
+    
 }

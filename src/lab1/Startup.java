@@ -1,6 +1,10 @@
 package lab1;
 
 //import java.util.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //import java.util.List;
 
 /**
@@ -16,18 +20,17 @@ public class Startup {
         
 
         
-        HumanResourcesStrategy hr = new HumanResources();
-
+        HumanResources hr = new HumanResources();
         
-        hr.createNewEmployee("Alex", "Plouff", "B101");
-        hr.hireEmployee( hr.getEmployee() );
-        System.out.println( hr.verifyNewHire() );
+        hr.createNewEmployee( "Dan"  , "Rogers" , "C306" );
+        hr.createNewEmployee( "Alex" , "Plouff" , "B101" );
+        hr.createNewEmployee( "Josh" , "Conley" , "B102" );
         
-        hr.createNewEmployee("Dan", "Rogers", "C306");
-        hr.hireEmployee( hr.getEmployee() );
-        System.out.println( hr.verifyNewHire() );
+        System.out.println( hr.getEmployeeList() );
         
         
+        
+//        employeeList.add( hr.getEmployee() );
     //        
 //        EmployeeStrategy alex = new Employee( "Alex" , "Plouff" , "B101"  );
 //        EmployeeStrategy dan = new Employee( "Dan" , "Rogers" , "C201" ) ;
